@@ -11,10 +11,10 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { UserButton, ClerkLoading, ClerkLoaded } from "@clerk/nextjs";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Spinner } from "./ui/kibo-ui/spinner";
+import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -135,12 +135,11 @@ export function Navbar() {
               </ClerkLoaded>
             </div>
           </Button>
-          <Button asChild variant={"orange"} size="sm" className="text-sm">
-            <Link href={"/"}>
+          <InteractiveHoverButton className="text-sm">
+            <Link href={"/"} className="flex items-center gap-2">
               Dashboard
-              <ChevronRight className="size-4" />
             </Link>
-          </Button>
+          </InteractiveHoverButton>
         </div>
       </div>
     </header>
