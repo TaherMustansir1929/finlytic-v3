@@ -1,4 +1,5 @@
 import { ClerkLoaded, ClerkLoading, SignIn } from "@clerk/nextjs";
+import { neobrutalism } from "@clerk/themes";
 import { Loader2 } from "lucide-react";
 import Image from "next/image";
 
@@ -14,7 +15,7 @@ export default function SignInPage() {
         </div>
         <div className="flex items-center justify-center mt-8">
           <ClerkLoaded>
-            <SignIn path="/sign-in" />
+            <SignIn path="/sign-in" appearance={{ baseTheme: neobrutalism }} />
           </ClerkLoaded>
           <ClerkLoading>
             <Loader2 className="animate-spin text-muted-foreground" />
